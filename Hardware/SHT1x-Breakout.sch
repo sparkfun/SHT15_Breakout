@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -153,11 +153,6 @@
 <libraries>
 <library name="SparkFun">
 <packages>
-<package name="CREATIVE_COMMONS">
-<text x="-20.32" y="5.08" size="1.778" layer="27">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
-<text x="0" y="2.54" size="1.778" layer="27">http://creativecommons.org/licenses/by-sa/3.0</text>
-<text x="11.43" y="0" size="1.778" layer="27">Designed by:</text>
-</package>
 <package name="1X04">
 <wire x1="6.985" y1="1.27" x2="8.255" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="8.255" y1="1.27" x2="8.89" y2="0.635" width="0.2032" layer="21"/>
@@ -394,11 +389,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pin name="3" x="5.08" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="4" x="5.08" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 </symbol>
-<symbol name="CREATIVE_COMMONS">
-<text x="0" y="5.08" size="1.778" layer="95">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
-<text x="0" y="2.54" size="1.778" layer="95">http://creativecommons.org/licenses/by-sa/3.0</text>
-<text x="0" y="0" size="1.778" layer="95">Design by:</text>
-</symbol>
 <symbol name="VCC2">
 <wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
@@ -414,18 +404,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </gates>
 <devices>
 <device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="CREATIVE_COMMONS">
-<gates>
-<gate name="G$1" symbol="CREATIVE_COMMONS" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="CREATIVE_COMMONS">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -30459,7 +30437,6 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun" deviceset="M04" device="PTH"/>
 <part name="P+1" library="SparkFun" deviceset="VCC" device=""/>
-<part name="U$4" library="SparkFun" deviceset="CREATIVE_COMMONS" device=""/>
 <part name="U1" library="SparkFun-Sensors" deviceset="SHT1X" device="SMD"/>
 <part name="P+3" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
@@ -30467,10 +30444,13 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <part name="P+4" library="SparkFun" deviceset="VCC" device=""/>
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="R1" library="SparkFun-Resistors" deviceset="10KOHM-1/10W-1%(0603)" device="0603" value="10K"/>
-<part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device=""/>
+<part name="SJ1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NC_BY_TRACE" device="" value="JUMPER"/>
 <part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
-<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
+<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="">
+<attribute name="DESIGNER" value="Joel Bartlett"/>
+<attribute name="VERSION" value="v14"/>
+</part>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
@@ -30482,22 +30462,27 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <sheets>
 <sheet>
 <plain>
-<text x="12.7" y="170.18" size="1.778" layer="97">Sht_15 Sensor</text>
+<text x="38.1" y="175.26" size="3.81" layer="97">Sht_15 Sensor</text>
 <text x="5.08" y="129.54" size="1.778" layer="97">The SHT_15 communicates using a 2-wire Serial Protocol, NOT I2C.</text>
 <text x="5.08" y="127" size="1.778" layer="97">However, it can live on an I2C bus with other I2C devices without interfering.</text>
-<text x="208.28" y="170.18" size="1.778" layer="97">Connector</text>
-<text x="142.24" y="170.18" size="1.778" layer="97">Pull-up Resistor</text>
+<text x="210.82" y="175.26" size="3.81" layer="97">Connector</text>
+<text x="139.7" y="175.26" size="3.81" layer="97">Pull-up Resistor</text>
 <wire x1="0" y1="109.22" x2="129.54" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="129.54" y1="109.22" x2="198.12" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="198.12" y1="109.22" x2="248.92" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="129.54" y1="185.42" x2="129.54" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="198.12" y1="185.42" x2="198.12" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
+<text x="171.45" y="11.176" size="2.54" layer="94">Nathan Seidle</text>
+<text x="237.998" y="6.858" size="2.54" layer="94">V14</text>
+<text x="148.59" y="6.858" size="2.54" layer="94">Revised By: Joel Bartlett</text>
+<text x="35.56" y="167.64" size="2.54" layer="96">Vcc Range = 2.4V - 5.5V</text>
+<text x="137.16" y="124.46" size="1.778" layer="96">Cut trace on jumper to disable pullup
+ resistor on Data line.</text>
 </plain>
 <instances>
 <instance part="GND3" gate="1" x="45.72" y="137.16"/>
 <instance part="JP1" gate="G$1" x="231.14" y="149.86" rot="R180"/>
 <instance part="P+1" gate="1" x="45.72" y="152.4"/>
-<instance part="U$4" gate="G$1" x="30.48" y="15.24"/>
 <instance part="U1" gate="G$1" x="17.78" y="147.32" rot="R180"/>
 <instance part="P+3" gate="1" x="27.94" y="152.4"/>
 <instance part="GND1" gate="1" x="27.94" y="137.16"/>
@@ -30509,14 +30494,18 @@ logo. Default layer for the logo on the board is tSilk.</description>
 <instance part="STANDOFF1" gate="G$1" x="149.86" y="38.1"/>
 <instance part="STANDOFF2" gate="G$1" x="154.94" y="38.1"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="V" x="147.32" y="0"/>
+<instance part="FRAME1" gate="V" x="147.32" y="0" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="160.02" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="233.68" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="162.814" y="17.78" size="2.7432" layer="94" font="vector"/>
+</instance>
 <instance part="LOGO1" gate="G$1" x="134.62" y="10.16"/>
 <instance part="FID1" gate="G$1" x="160.02" y="38.1"/>
 <instance part="FID2" gate="G$1" x="165.1" y="38.1"/>
 <instance part="LOGO4" gate="G$1" x="114.3" y="2.54"/>
 <instance part="P+2" gate="1" x="142.24" y="154.94"/>
 <instance part="LOGO2" gate="G$1" x="185.42" y="35.56"/>
-<instance part="LOGO5" gate="G$1" x="185.42" y="35.56"/>
+<instance part="LOGO5" gate="G$1" x="186.7154" y="35.179"/>
 </instances>
 <busses>
 </busses>
@@ -30606,4 +30595,10 @@ logo. Default layer for the logo on the board is tSilk.</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
