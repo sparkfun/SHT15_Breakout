@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
@@ -91,6 +91,7 @@
 <layer number="112" name="tSilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="113" name="IDFDebug" color="7" fill="1" visible="no" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
@@ -182,8 +183,8 @@
 <wire x1="18.5928" y1="3.0988" x2="8.4328" y2="3.0988" width="0.2032" layer="20"/>
 <wire x1="8.4328" y1="3.0988" x2="7.7216" y2="3.81" width="0.2032" layer="20" curve="-90"/>
 <text x="6.7056" y="6.4516" size="0.8128" layer="21" font="vector" ratio="15">PU</text>
-<text x="20.0152" y="2.7432" size="0.889" layer="21" font="vector" ratio="15" rot="R180">SHT15 Temperature
-&amp; Humidity Sensor</text>
+<text x="19.2532" y="2.7432" size="0.889" layer="21" font="vector" ratio="15" rot="R180">Humidity &amp; Temp
+Sensor - SHT15</text>
 <text x="19.685" y="0.635" size="1.27" layer="16" font="vector" ratio="15" rot="MR0">V14</text>
 <text x="5.0546" y="12.319" size="0.889" layer="22" font="vector" ratio="15" rot="MR0">GND</text>
 <text x="2.6162" y="10.668" size="0.889" layer="22" font="vector" ratio="15" rot="MR180">VCC</text>
@@ -192,14 +193,14 @@
 <text x="12.6746" y="-12.8524" size="1.778" layer="51" font="vector" ratio="10">Joel Bartlett</text>
 <text x="-5.08" y="-12.7" size="1.778" layer="51" font="vector" ratio="10">Revised By:</text>
 <text x="12.7" y="-10.16" size="1.778" layer="51" font="vector" ratio="9">Nathan Seidle</text>
-<text x="9.5758" y="3.302" size="1.016" layer="49" font="vector" ratio="12">Route Out</text>
-<text x="9.8044" y="13.5128" size="1.016" layer="49" font="vector" ratio="12">Route Out</text>
-<text x="5.4102" y="17.399" size="0.889" layer="22" font="vector" ratio="15" rot="MR180">SHT15 Temperature 
-&amp; Humidity Sensor</text>
+<text x="9.5758" y="3.302" size="1.016" layer="51" font="vector" ratio="12">Route Out</text>
+<text x="9.8044" y="13.5128" size="1.016" layer="51" font="vector" ratio="12">Route Out</text>
 <dimension x1="0" y1="17.78" x2="20.32" y2="17.78" x3="10.16" y3="24.13" textsize="1.016" textratio="12" layer="47" unit="inch"/>
 <dimension x1="0" y1="17.78" x2="0" y2="0" x3="-7.62" y3="8.89" textsize="1.016" textratio="12" layer="47" unit="inch"/>
 <dimension x1="4.445" y1="15.875" x2="4.445" y2="1.905" x3="-3.81" y3="8.89" textsize="1.016" textratio="12" layer="47" unit="inch"/>
 <dimension x1="0" y1="17.78" x2="4.445" y2="17.78" x3="2.2225" y3="19.685" textsize="1.016" textratio="12" layer="47" unit="inch"/>
+<text x="7.5438" y="17.3482" size="0.889" layer="22" font="vector" ratio="15" rot="MR180">Humidity &amp; Temp
+Sensor - SHT15</text>
 </plain>
 <libraries>
 <library name="SparkFun">
@@ -436,26 +437,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 <package name="SFE_LOGO_FLAME_.1">
 <polygon width="0.01" layer="21">
-<vertex x="1.7" y="2.48"/>
-<vertex x="1.7" y="2.46"/>
-<vertex x="1.7" y="2.43"/>
+<vertex x="1.7" y="2.49"/>
 <vertex x="1.7" y="2.4"/>
 <vertex x="1.69" y="2.37"/>
 <vertex x="1.68" y="2.35"/>
 <vertex x="1.65" y="2.32"/>
 <vertex x="1.62" y="2.31"/>
 <vertex x="1.59" y="2.31"/>
-<vertex x="1.55" y="2.32"/>
 <vertex x="1.51" y="2.33"/>
 <vertex x="1.47" y="2.35"/>
 <vertex x="1.44" y="2.37"/>
 <vertex x="1.4" y="2.4"/>
-<vertex x="1.37" y="2.43"/>
 <vertex x="1.34" y="2.46"/>
-<vertex x="1.32" y="2.49"/>
 <vertex x="1.3" y="2.52"/>
 <vertex x="1.29" y="2.56"/>
-<vertex x="1.29" y="2.59"/>
 <vertex x="1.29" y="2.62"/>
 <vertex x="1.3" y="2.65"/>
 <vertex x="1.31" y="2.67"/>
@@ -464,13 +459,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="1.41" y="2.75"/>
 <vertex x="1.46" y="2.76"/>
 <vertex x="1.5" y="2.77"/>
-<vertex x="1.53" y="2.77"/>
 <vertex x="1.56" y="2.77"/>
 <vertex x="1.58" y="2.76"/>
 <vertex x="1.59" y="2.76"/>
 <vertex x="1.58" y="2.77"/>
 <vertex x="1.54" y="2.8"/>
-<vertex x="1.48" y="2.83"/>
 <vertex x="1.4" y="2.87"/>
 <vertex x="1.31" y="2.89"/>
 <vertex x="1.21" y="2.89"/>
@@ -494,58 +487,35 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0.86" y="1.75"/>
 <vertex x="0.81" y="1.76"/>
 <vertex x="0.76" y="1.78"/>
-<vertex x="0.73" y="1.81"/>
 <vertex x="0.7" y="1.84"/>
 <vertex x="0.68" y="1.87"/>
 <vertex x="0.67" y="1.9"/>
 <vertex x="0.67" y="1.94"/>
 <vertex x="0.68" y="1.97"/>
-<vertex x="0.7" y="1.99"/>
-<vertex x="0.72" y="2.01"/>
 <vertex x="0.74" y="2.03"/>
 <vertex x="0.77" y="2.04"/>
-<vertex x="0.79" y="2.05"/>
 <vertex x="0.81" y="2.06"/>
 <vertex x="0.82" y="2.07"/>
-<vertex x="0.8" y="2.08"/>
 <vertex x="0.78" y="2.09"/>
-<vertex x="0.74" y="2.09"/>
-<vertex x="0.7" y="2.09"/>
 <vertex x="0.66" y="2.09"/>
 <vertex x="0.6" y="2.08"/>
 <vertex x="0.55" y="2.07"/>
 <vertex x="0.5" y="2.05"/>
 <vertex x="0.46" y="2.02"/>
 <vertex x="0.41" y="1.98"/>
-<vertex x="0.38" y="1.93"/>
 <vertex x="0.35" y="1.88"/>
 <vertex x="0.33" y="1.81"/>
 <vertex x="0.32" y="1.73"/>
-<vertex x="0.32" y="1.63"/>
-<vertex x="0.32" y="1.47"/>
-<vertex x="0.32" y="1.31"/>
-<vertex x="0.32" y="1.15"/>
-<vertex x="0.32" y="0.99"/>
-<vertex x="0.32" y="0.83"/>
-<vertex x="0.32" y="0.67"/>
-<vertex x="0.32" y="0.51"/>
-<vertex x="0.32" y="0.35"/>
 <vertex x="0.32" y="0.36"/>
-<vertex x="0.34" y="0.38"/>
 <vertex x="0.37" y="0.41"/>
 <vertex x="0.4" y="0.46"/>
 <vertex x="0.45" y="0.51"/>
 <vertex x="0.5" y="0.57"/>
-<vertex x="0.56" y="0.63"/>
 <vertex x="0.62" y="0.69"/>
-<vertex x="0.68" y="0.76"/>
 <vertex x="0.74" y="0.83"/>
-<vertex x="0.79" y="0.88"/>
 <vertex x="0.84" y="0.93"/>
-<vertex x="0.89" y="0.96"/>
 <vertex x="0.94" y="0.99"/>
 <vertex x="1" y="1"/>
-<vertex x="1.07" y="1"/>
 <vertex x="1.19" y="1"/>
 <vertex x="1.31" y="1.02"/>
 <vertex x="1.42" y="1.05"/>
@@ -561,7 +531,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="1.93" y="2.24"/>
 <vertex x="1.86" y="2.35"/>
 <vertex x="1.78" y="2.44"/>
-<vertex x="1.7" y="2.49"/>
 </polygon>
 </package>
 <package name="SFE_LOGO_NAME_.1">
@@ -2711,7 +2680,9 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="JP1" library="SparkFun" package="1X04" value="" x="1.27" y="5.08" rot="R90"/>
-<element name="U1" library="SparkFun-Sensors" package="SHT1X" value="SHT1XSMD" x="14.605" y="8.89"/>
+<element name="U1" library="SparkFun-Sensors" package="SHT1X" value="SHT1XSMD" x="14.605" y="8.89">
+<attribute name="PROD_ID" value="IC-08303" x="14.605" y="8.89" size="1.778" layer="27" display="off"/>
+</element>
 <element name="C1" library="SparkFun-Capacitors" package="0603-CAP" value="0.1uF" x="6.35" y="11.43" rot="R90">
 <attribute name="PROD_ID" value="CAP-00810" x="6.35" y="11.43" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
@@ -2721,10 +2692,7 @@ design rules under a new name.</description>
 <element name="SJ1" library="SparkFun-Passives" package="PAD-JUMPER-2-NC_BY_TRACE_YES_SILK" value="JUMPER" x="7.366" y="8.509" rot="R270"/>
 <element name="STANDOFF1" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="4.445" y="15.875"/>
 <element name="STANDOFF2" library="SparkFun-Electromechanical" package="STAND-OFF" value="STAND-OFF" x="4.445" y="1.905"/>
-<element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="" x="-17.78" y="-10.16">
-<attribute name="VERSION" value="v14" x="-17.78" y="-10.16" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
-<attribute name="DESIGNER" value="Joel Bartlett" x="-17.78" y="-10.16" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
-</element>
+<element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LETTER" x="-17.78" y="-10.16"/>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="13.97" y="1.397" rot="MR0"/>
 <element name="FID1" library="SparkFun-Aesthetics" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="19.05" y="15.875"/>
 <element name="FID2" library="SparkFun-Aesthetics" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="1.27" y="1.27"/>
@@ -2749,12 +2717,10 @@ design rules under a new name.</description>
 <contactref element="JP1" pad="3"/>
 <contactref element="R1" pad="2"/>
 <wire x1="6.35" y1="10.58" x2="3.81" y2="10.58" width="0.254" layer="1"/>
-<wire x1="3.81" y1="10.58" x2="1.69" y2="10.58" width="0.254" layer="1"/>
+<wire x1="3.595" y1="10.58" x2="1.69" y2="10.58" width="0.254" layer="1"/>
 <wire x1="1.69" y1="10.58" x2="1.27" y2="10.16" width="0.254" layer="1"/>
 <via x="8.5344" y="9.9314" extent="1-16" drill="0.508"/>
 <wire x1="7.327" y1="10.58" x2="6.35" y2="10.58" width="0.254" layer="1"/>
-<wire x1="3.595" y1="8.89" x2="3.595" y2="10.365" width="0.254" layer="1"/>
-<wire x1="3.595" y1="10.365" x2="3.81" y2="10.58" width="0.254" layer="1"/>
 <wire x1="11.938" y1="6.985" x2="10.5664" y2="6.985" width="0.254" layer="1"/>
 <wire x1="10.5664" y1="6.985" x2="10.2616" y2="7.2898" width="0.254" layer="1"/>
 <via x="10.2616" y="7.2898" extent="1-16" drill="0.508"/>
@@ -2763,18 +2729,17 @@ design rules under a new name.</description>
 <wire x1="7.9756" y1="9.9314" x2="8.5344" y2="9.9314" width="0.254" layer="1"/>
 <wire x1="10.2616" y1="8.6614" x2="8.9916" y2="9.9314" width="0.254" layer="16"/>
 <wire x1="8.9916" y1="9.9314" x2="8.5344" y2="9.9314" width="0.254" layer="16"/>
+<wire x1="3.595" y1="8.89" x2="3.595" y2="10.58" width="0.254" layer="1"/>
+<wire x1="3.595" y1="10.58" x2="3.81" y2="10.58" width="0.254" layer="1"/>
 </signal>
 <signal name="SCK">
 <contactref element="U1" pad="3"/>
 <contactref element="JP1" pad="1"/>
-<via x="3.175" y="6.35" extent="1-16" drill="0.508"/>
-<via x="8.89" y="7.62" extent="1-16" drill="0.508"/>
 <wire x1="9.525" y1="8.255" x2="11.938" y2="8.255" width="0.254" layer="1"/>
-<wire x1="9.525" y1="8.255" x2="8.89" y2="7.62" width="0.254" layer="1"/>
-<wire x1="8.89" y1="7.62" x2="4.445" y2="7.62" width="0.254" layer="16"/>
-<wire x1="4.445" y1="7.62" x2="3.175" y2="6.35" width="0.254" layer="16"/>
 <wire x1="1.27" y1="5.08" x2="1.905" y2="5.08" width="0.254" layer="1"/>
-<wire x1="1.905" y1="5.08" x2="3.175" y2="6.35" width="0.254" layer="1"/>
+<wire x1="1.905" y1="5.08" x2="3.683" y2="6.858" width="0.254" layer="1"/>
+<wire x1="3.683" y1="6.858" x2="8.128" y2="6.858" width="0.254" layer="1"/>
+<wire x1="8.128" y1="6.858" x2="9.525" y2="8.255" width="0.254" layer="1"/>
 </signal>
 <signal name="DATA">
 <contactref element="U1" pad="2"/>
@@ -2795,12 +2760,13 @@ design rules under a new name.</description>
 </signal>
 </signals>
 <errors>
-<approved hash="19,1,730114ed39ba3756"/>
-<approved hash="19,1,93817c475982fcdd"/>
-<approved hash="19,1,4abe3b7fd900df2a"/>
-<approved hash="19,1,ef7f7459a6ac4a61"/>
-<approved hash="19,1,6bb30fd2527c47ac"/>
-<approved hash="19,1,209ea0e0c3ed990c"/>
+<approved hash="3,16,e0dc2e03b82d76f2"/>
+<approved hash="19,1,2100ddd22c055dd6"/>
+<approved hash="19,1,0882cb46e380c4d8"/>
+<approved hash="19,1,5f7ebe62b11306e2"/>
+<approved hash="19,1,80bd8b4095bbc8ab"/>
+<approved hash="19,1,e8b2dcec28c7b72c"/>
+<approved hash="19,1,409968e171ed7b0c"/>
 </errors>
 </board>
 </drawing>
