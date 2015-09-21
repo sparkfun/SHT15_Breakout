@@ -22,7 +22,7 @@ https://github.com/sparkfun/SHT15_Breakout/
 This code is beerware.
 Distributed as-is; no warranty is given. 
 ******************************************************************************/
-#include <SparkFun_SHT1X.h>
+#include <SHT1X.h>
 
 //variables for storing values
 float tempC = 0;

@@ -14,8 +14,8 @@
  * temperature / humidity sensors from Sensirion (www.sensirion.com).
  */
 
-#ifndef SparkFun_SHT1X_h
-#define SparkFun_SHT1X_h
+#ifndef SHT1X_h
+#define SHT1X_h
 
 #if (ARDUINO >= 100)
 #include <Arduino.h>

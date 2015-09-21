@@ -14,7 +14,7 @@
  * temperature / humidity sensors from Sensirion (www.sensirion.com).
  */
 
-#include "SparkFun_SHT1x.h"
+#include "SHT1x.h"
 
 SHT1x::SHT1x(int dataPin, int clockPin)
 {
