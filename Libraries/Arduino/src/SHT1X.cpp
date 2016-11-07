@@ -71,11 +71,14 @@ float SHT1x::readHumidity()
   float _linearHumidity;       // Humidity with linear correction applied
   float _correctedHumidity;    // Temperature-corrected humidity
   float _temperature;          // Raw temperature value
-
+  
   // Conversion coefficients from SHT15 datasheet
-  const float C1 = -4.0;       // for 12 Bit
-  const float C2 =  0.0405;    // for 12 Bit
-  const float C3 = -0.0000028; // for 12 Bit
+  //const float C1 = -4.0;       //  for V3 sensors
+  //const float C2 =  0.0405;    //  for V3 sensors, 12-bit precision
+  //const float C3 = -0.0000028; //  for V3 sensors, 12-bit precision
+  const float C1  = -2.0468;        // for V4 sensors
+  const float C2 =  0.0367;        // for V4 sensors, 12-bit precision
+  const float C3 = -1.5955E-6;     // for V4 sensors, 12-bit precision
   const float T1 =  0.01;      // for 14 Bit @ 5V
   const float T2 =  0.00008;   // for 14 Bit @ 5V
 
