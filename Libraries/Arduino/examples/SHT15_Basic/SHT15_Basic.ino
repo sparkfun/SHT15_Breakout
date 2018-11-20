@@ -2,7 +2,6 @@
 SHT15 Example
 Joel Bartlett @ SparkFun Electronics
 16 Sept 2015
-https://github.com/sparkfun/SparkFun_ISL29125_Breakout_Arduino_Library
 
 This example shows how to get the temperature in F or C and humidity
 Developed/Tested with:
