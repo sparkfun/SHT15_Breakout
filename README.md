@@ -12,6 +12,7 @@ Repository Contents
 
 Documentation
 --------------
+* **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic information on how to install an Arduino library.
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/sht15-humidity-and-temperature-sensor-hookup-guide)** - Basic hookup guide for the sensor.
 * **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
 * **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 
