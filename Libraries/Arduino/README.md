@@ -1,6 +1,6 @@
 SparkFun SHT1X Arduino Library
 ========================================
-![SHT15 Humidity and Teme Sensor Breakout](https://cdn.sparkfun.com/assets/parts/1/1/1/3/9/13683-01.jpg)](https://www.sparkfun.com/products/12055)
+[![SHT15 Humidity and Teme Sensor Breakout](https://cdn.sparkfun.com/assets/parts/1/1/1/3/9/13683-01.jpg)](https://www.sparkfun.com/products/12055)
 
 [SHT15 Humidity and Temperature Sensor Breakout (SEN-13683)](https://www.sparkfun.com/products/13683)
 
